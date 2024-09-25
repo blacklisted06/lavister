@@ -1,674 +1,775 @@
 :root {
-    --primary: #353535;
-    --secondary: #133a4e;
+  --primary: #353535;
+  --secondary: #133a4e;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.button.button--primary {
+  text-transform: uppercase;
+}
+
+.header__icons {
+  gap: 1rem;
+}
+
+.header__menu-item span {
+  font-size: 16px;
+  line-height: 26px;
+  text-transform: capitalize;
+}
+
+.rich-text__caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-with-line::before,
+.title-with-line::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #8e8e8e;
+  max-width: 100px;
+}
+
+.title-with-line::before,
+.multibox-section .title-with-line:before {
+  margin-right: 30px;
+}
+
+.title-with-line::after,
+.multibox-section .title-with-line:after {
+  margin-left: 30px;
+}
+
+.title-with-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.multibox-section .title-with-line:before,
+.multibox-section .title-with-line:after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #8e8e8e;
+  max-width: 100px;
+}
+
+.logo-list-section .logo-item {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.logo-list-section .logo-item h5.logo-heading {
+  margin: 0;
+}
+
+h5.logo-heading {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-top: 10px;
+}
+
+.logo-list-section h2.title {
+  padding-bottom: 50px;
+}
+
+/*-----------------slideshow SH -------------------  */
+h2.banner__heading p {
+  margin: 0px;
+}
+
+.slideshow__text-wrapper .banner__heading {
+  font-size: 60px;
+  text-transform: capitalize;
+}
+
+.slideshow__text-wrapper .banner__text {
+  color: rgba(19, 58, 78, 0.81);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.slider-buttons {
+  position: absolute !important;
+  bottom: 3rem;
+  width: 100%;
+}
+
+.discount-code {
+  border-radius: 10px;
+  border: 1px solid #ced9f0;
+  background: #fff;
+  padding: 10px 24px;
+  margin-bottom: 50px;
+}
+
+.discount-code span.bold-text {
+  display: block;
+  color: #1a526f;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.7px;
+  text-transform: capitalize;
+  line-height: normal;
+}
+
+.product-card-wrapper .wishlist {
+  position: absolute;
+  right: 10px;
+  bottom: 2rem;
+  z-index: 2;
+  font-size: 20px;
+  line-height: 0;
+}
+
+.card-wrapper .product-card-wrapper {
+  position: relative;
+}
+
+.step-form-section p.rich-text__caption {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.card__information .card__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: var(--primary);
+}
+
+.card-wrapper .quick-add__submit {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.multibox-section h2.title.inline-richtext {
+  justify-content: center;
+}
+
+/* ---------------------------------- featured collection SH ---------------------- */
+.collection__title.title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.collection__title h2.title {
+  margin: 0;
+}
+
+.wishlist .swym-add-to-wishlist-view-product:after {
+  color: #ffffff !important;
+  background: #71b1be;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.line {
+  flex-grow: 1;
+  margin: 0 30px;
+  height: 1px;
+  background: #c7c7c7;
+}
+
+.rotating-path {
+  transform-origin: 50% 50%;
+  animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .footer a {
-    color: #fff;
-    text-decoration: none;
+
+  100% {
+    transform: rotate(360deg);
   }
-  
-  a.button.button--primary {
-    text-transform: uppercase;
-  }
-  
-  .header__icons {
-    gap: 1rem;
-  }
-  
-  .header__menu-item span {
-    font-size: 16px;
-    line-height: 26px;
-    text-transform: capitalize;
-  }
-  
-  .rich-text__caption {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .title-with-line::before,
-  .title-with-line::after {
-    content: "";
-    flex-grow: 1;
-    height: 1px;
-    background-color: #8e8e8e;
-    max-width: 100px;
-  }
-  
-  .title-with-line::before,
-  .multibox-section .title-with-line:before {
-    margin-right: 30px;
-  }
-  
-  .title-with-line::after,
-  .multibox-section .title-with-line:after {
-    margin-left: 30px;
-  }
-  
-  .title-with-line {
-    display: flex;
-    align-items: center;
+}
+
+/*------------ footer ---------------  */
+.contact-details .phone-nbr,
+.contact-details .email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 1rem;
+}
+
+.contact-details {
+  margin-top: 2rem;
+}
+
+.footer__copyright.caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright__content {
+  font-size: 14px;
+}
+
+/*----------------- multibox-section -------------*/
+.multibox-section .title-wrapper-with-link {
+  flex-direction: column;
+}
+
+.multibox-section .multicolumn-description p {
+  margin: 0;
+}
+
+.multibox-section
+  .multicolumn-list__item:nth-child(odd)
+  .multicolumn-card__info {
+  background: rgba(241, 255, 226, 0.85);
+}
+
+.multibox-section
+  .multicolumn-list__item:nth-child(even)
+  .multicolumn-card__info {
+  background: rgba(240, 230, 248, 0.85);
+}
+
+.tabs-section .inline-class {
+  text-align: left;
+}
+
+.custom-tabs {
+  justify-content: center;
+  padding-bottom: 50px;
+  margin: 0px;
+}
+
+.custom-tabs li.tab-list a {
+  color: rgba(27, 29, 25, 0.8);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-family: "Montserrat";
+}
+
+.custom-tabs li a.link_tab.active {
+  border-bottom: 2px solid #71b1be;
+  display: block;
+}
+
+/* ------------------------------logo-list-section ------------------------ */
+.logo-list-section h2.title.inline-richtext.h1 {
+  justify-content: center;
+  font-family: Playfair Display;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+}
+/*--------------------- testimonial section -----------------------  */
+.slick-next:before,
+.slick-prev:before {
+  border: solid rgba(5, 5, 5, 0.78);
+  border-width: 0px 3px 3px 0;
+  display: inline-block;
+  content: "" !important;
+  padding: 7px;
+  opacity: 1 !important;
+}
+
+.testimonial-slider .slick-next {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.testimonial-slider .slick-prev {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.testimonial-section {
+  padding: 60px 0 80px 0;
+}
+.testimonial-block .customer-review {
+  position: relative;
+}
+
+.testimonial-block .customer-review:before {
+  background-image: url(https://cdn.shopify.com/s/files/1/0665/3542/4175/files/quotes-img.png?v=1727170577);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 35px;
+  height: 30px;
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -35px;
+}
+
+.testimonial-block .customer-review:after {
+  background-image: url(/cdn/shop/files/quotes-img-1.png?v=1727171097);
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 35px;
+  height: 30px;
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+}
+
+/*--------------- newsletter section -------------------  */
+.newsletter__wrapper {
+  background-image: url(https://cdn.shopify.com/s/files/1/0665/3542/4175/files/newsletter-bg.png?v=1726829687) !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: unset !important;
+}
+
+.newsletter .newsletter-form__field-wrapper .field {
+  z-index: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-form__field-wrapper .field__input {
+  border-radius: 4px;
+  border: 1px solid #abb0b2;
+}
+
+.newsletter-form__field-wrapper .newsletter-form__button {
+  background: #1e1e1e !important;
+  padding: 20px;
+  color: #fff;
+  height: 4.5rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 200px;
+  position: relative;
+}
+
+.newsletter-form__field-wrapper .field:before,
+.newsletter-form__field-wrapper .field:after {
+  box-shadow: none !important;
+}
+
+.newsletter .newsletter__wrapper .newsletter-form__field-wrapper {
+  max-width: 50rem !important;
+}
+
+.step-form-section .rich-text:after {
+  background-image: url(https://cdn.shopify.com/s/files/1/0665/3542/4175/files/tube-image.webp?v=1727158540);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  left: auto;
+  width: 200px;
+  height: 300px;
+  top: 1rem;
+}
+
+/*------------------------Essentials col tabs-----------------  */
+.Essentials .custom-tabs .icon_tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.Essentials .custom-tabs .icon_tabs .icon-image {
+  background: #f4f7f6;
+  padding: 20px;
+  border-radius: 50%;
+  height: 110px;
+  width: 110px;
+}
+
+.Essentials .collection__title {
+  padding-bottom: 30px;
+}
+
+.Essentials .custom-tabs .icon_tabs.active .icon-image {
+  background: #71b1be;
+}
+
+a.icon_tabs.active .icon-image img {
+  filter: brightness(0) invert(1);
+}
+
+/*------------------------------- ---------------------------------- */
+.two-columns-with-image-section .column-with-text.grid__item {
+  width: 50%;
+  max-width: 50%;
+}
+
+.two-columns-with-image-section .two-columns-wrapper.grid {
+  gap: 0;
+  width: 100%;
+  display: flex;
+}
+  .two-columns-wrapper .image img {
     width: 100%;
-    justify-content: center;
-  }
-  
-  .multibox-section .title-with-line:before,
-  .multibox-section .title-with-line:after {
-    content: "";
-    flex-grow: 1;
-    height: 1px;
-    background-color: #8e8e8e;
-    max-width: 100px;
-  }
-  
-  .logo-list-section .logo-item {
-    border-radius: 6px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  
-  .logo-list-section .logo-item h5.logo-heading {
-    margin: 0;
-  }
-  
-  h5.logo-heading {
-    font-family: "Montserrat";
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: capitalize;
-    padding-top: 10px;
-  }
-  
-  .logo-list-section h2.title {
-    padding-bottom: 50px;
-  }
-  
-  /*-----------------slideshow SH -------------------  */
-  h2.banner__heading p {
-    margin: 0px;
-  }
-  
-  .slideshow__text-wrapper .banner__heading {
-    font-size: 60px;
-    text-transform: capitalize;
-  }
-  
-  .slideshow__text-wrapper .banner__text {
-    color: rgba(19, 58, 78, 0.81);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: normal;
-  }
-  
-  .slider-buttons {
-    position: absolute !important;
-    bottom: 3rem;
-    width: 100%;
-  }
-  
-  .discount-code {
-    border-radius: 10px;
-    border: 1px solid #ced9f0;
-    background: #fff;
-    padding: 10px 24px;
-    margin-bottom: 50px;
-  }
-  
-  .discount-code span.bold-text {
-    display: block;
-    color: #1a526f;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: -0.7px;
-    text-transform: capitalize;
-    line-height: normal;
-  }
-  
-  .product-card-wrapper .wishlist {
-    position: absolute;
-    right: 10px;
-    bottom: 2rem;
-    z-index: 2;
-    font-size: 20px;
-    line-height: 0;
-  }
-  
-  .card-wrapper .product-card-wrapper {
+    height: auto;
+}
+  .two-columns-with-image-section .column-with-text {
     position: relative;
-  }
-  
-  .step-form-section p.rich-text__caption {
-    font-size: 24px;
+}
+.column-content {
+    position: absolute;
+    top: 0;  
+    left: 0;
+    right: 0;
+    bottom: 0; 
+}
+.two-columns-with-image-section .column-content {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.two-columns-with-image-section .column-content h2 {
+    margin: 0px;
+}
+
+/* -------------------- testimonial section ------------------- */
+.testimonial-section span.percentage {
+  color: #535353;
+  font-family: Montserrat;
+  font-size: 70px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.testimonial-section .sub-heading h3 {
+  margin: 0;
+  padding-bottom: 3rem;
+}
+
+.testimonial-section .page-width,
+.logo-list-section .page-width {
+  max-width: 130rem;
+}
+.testimonial-block .image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.custom-tabs .icon-image img {
+  width: 100%;
+  height: auto;
+}
+.be-you-everyday .custom-section__content p {
+    font-family: "Playfair Display";
+    font-size: 32px;
     font-weight: 400;
-  }
-  
-  .card__information .card__heading {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-family: "Montserrat";
-    font-size: 18px;
+    line-height: 45px;
+    letter-spacing: 0.32px;
+    margin: 0;
+}
+
+.header__icons svg.icon.icon-cart-empty, .header__icons svg.icon.icon-cart {
+    height: 2.2rem;
+    width: 2.2rem;
+}
+.card__badge .sale__badge {
+    display: none;
+}
+.grid__item.custom-section__image img {
+    max-width: 100%;
+}
+ul.custom-tabs {
+    padding-bottom: 40px;
+    margin: 0;
+}
+.be-you-everyday .grid.product-grid {
+    align-items: center;
+}
+.product-tags span {   
+    font-family: 'Montserrat';
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-    text-transform: capitalize;
-    color: var(--primary);
-  }
-  
-  .card-wrapper .quick-add__submit {
-    background: #1e1e1e;
-    color: #fff;
-  }
-  
-  .multibox-section h2.title.inline-richtext {
-    justify-content: center;
-  }
-  
-  /* ---------------------------------- featured collection SH ---------------------- */
-  .collection__title.title-wrapper {
-    display: flex;
-    align-items: center;
-  }
-  
-  .collection__title h2.title {
-    margin: 0;
-  }
-  
-  .wishlist .swym-add-to-wishlist-view-product:after {
-    color: #ffffff !important;
-    background: #71b1be;
-    padding: 8px;
-    border-radius: 50%;
-  }
-  
-  .line {
-    flex-grow: 1;
-    margin: 0 30px;
-    height: 1px;
-    background: #c7c7c7;
-  }
-  
-  .rotating-path {
-    transform-origin: 50% 50%;
-    animation: rotate 8s linear infinite;
-  }
-  
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  /*------------ footer ---------------  */
-  .contact-details .phone-nbr,
-  .contact-details .email {
+    text-transform: uppercase;
+}
+/*----------------------------------- collection page SH ------------------------------- */
+.facet-filters__field .select {
+    border-radius: 8px;
+    border: var(--Amount, 1px) solid #ddd;
+    padding: 10px;
+}
+.facets .toggle-buttons {
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-  
-  .contact-details {
-    margin-top: 2rem;
-  }
-  
-  .footer__copyright.caption {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .copyright__content {
-    font-size: 14px;
-  }
-  
-  /*----------------- multibox-section -------------*/
-  .multibox-section .title-wrapper-with-link {
-    flex-direction: column;
-  }
-  
-  .multibox-section .multicolumn-description p {
+}
+.toggle-grid-view.active svg rect {
+    stroke: #000;
+}
+.facets .toggle-buttons button {
     margin: 0;
-  }
-  
-  .multibox-section
-    .multicolumn-list__item:nth-child(odd)
-    .multicolumn-card__info {
-    background: rgba(241, 255, 226, 0.85);
-  }
-  
-  .multibox-section
-    .multicolumn-list__item:nth-child(even)
-    .multicolumn-card__info {
-    background: rgba(240, 230, 248, 0.85);
-  }
-  
-  .tabs-section .inline-class {
-    text-align: left;
-  }
-  
-  .custom-tabs {
-    justify-content: center;
-    padding-bottom: 50px;
-    margin: 0px;
-  }
-  
-  .custom-tabs li.tab-list a {
-    color: rgba(27, 29, 25, 0.8);
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+.facet-filters__field .select .svg-wrapper {
+    right: 1rem;
+}
+
+.wishlist .swym-added.swym-add-to-wishlist-view-product:after {
+    color: #ffffff !important;  
+}
+.wishlist .swym-button.swym-add-to-wishlist-view-product.swym-added {
+    opacity: 1 !important;
+}
+.facets-container span.facets__summary-label {
+    color: var(--primary);
+    font-family: 'Montserrat';
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: capitalize;
-    text-decoration: none;
-    font-family: "Montserrat";
-  }
-  
-  .custom-tabs li a.link_tab.active {
-    border-bottom: 2px solid #71b1be;
-    display: block;
-  }
-  
-  /* ------------------------------logo-list-section ------------------------ */
-  .logo-list-section h2.title.inline-richtext.h1 {
-    justify-content: center;
+    font-weight: 500;
+}
+
+
+/* ----------------------- faq section ---------------- */
+.faq-section .faq_heading h2 {
+    color: var(--primary);
     font-family: Playfair Display;
     font-size: 38px;
     font-style: normal;
     font-weight: 400;
+    margin-top: 0;
+}
+.faq-question {
+    cursor: pointer;
     margin: 0;
-  }
-  /*--------------------- testimonial section -----------------------  */
-  .slick-next:before,
-  .slick-prev:before {
-    border: solid rgba(5, 5, 5, 0.78);
-    border-width: 0px 3px 3px 0;
-    display: inline-block;
-    content: "" !important;
-    padding: 7px;
-    opacity: 1 !important;
-  }
-  
-  .testimonial-slider .slick-next {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
-  
-  .testimonial-slider .slick-prev {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-  }
-  
-  .testimonial-section {
-    padding: 60px 0 80px 0;
-  }
-  .testimonial-block .customer-review {
-    position: relative;
-  }
-  
-  .testimonial-block .customer-review:before {
-    background-image: url(https://cdn.shopify.com/s/files/1/0665/3542/4175/files/quotes-img.png?v=1727170577);
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 35px;
-    height: 30px;
-    content: "";
-    position: absolute;
-    top: -12px;
-    left: -35px;
-  }
-  
-  .testimonial-block .customer-review:after {
-    background-image: url(/cdn/shop/files/quotes-img-1.png?v=1727171097);
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 35px;
-    height: 30px;
-    content: "";
-    position: absolute;
-    bottom: -12px;
-    right: 0;
-  }
-  
-  /*--------------- newsletter section -------------------  */
-  .newsletter__wrapper {
-    background-image: url(https://cdn.shopify.com/s/files/1/0665/3542/4175/files/newsletter-bg.png?v=1726829687) !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-  }
-  
-  .newsletter .newsletter-form__field-wrapper .field {
-    z-index: 0;
-    display: flex;
-    gap: 10px;
-  }
-  
-  .newsletter-form__field-wrapper .field__input {
-    border-radius: 4px;
-    border: 1px solid #abb0b2;
-  }
-  
-  .newsletter-form__field-wrapper .newsletter-form__button {
-    background: #1e1e1e !important;
-    padding: 20px;
-    color: #fff;
-    height: 4.5rem;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    width: 200px;
-    position: relative;
-  }
-  
-  .newsletter-form__field-wrapper .field:before,
-  .newsletter-form__field-wrapper .field:after {
-    box-shadow: none !important;
-  }
-  
-  .newsletter .newsletter__wrapper .newsletter-form__field-wrapper {
-    max-width: 50rem !important;
-  }
-  
-  .step-form-section .rich-text:after {
-    background-image: url(https://cdn.shopify.com/s/files/1/0665/3542/4175/files/tube-image.webp?v=1727158540);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    right: 0;
-    left: auto;
-    width: 200px;
-    height: 300px;
-  }
-  
-  /*------------------------Essentials col tabs-----------------  */
-  .Essentials .custom-tabs .icon_tabs {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-  
-  .Essentials .custom-tabs .icon_tabs .icon-image {
-    background: #f4f7f6;
-    padding: 20px;
-    border-radius: 50%;
-    height: 110px;
-    width: 110px;
-  }
-  
-  .Essentials .collection__title {
-    padding-bottom: 30px;
-  }
-  
-  .Essentials .custom-tabs .icon_tabs.active .icon-image {
-    background: #71b1be;
-  }
-  
-  a.icon_tabs.active .icon-image img {
-    filter: brightness(0) invert(1);
-  }
-  
-  /*------------------------------- ---------------------------------- */
-  .two-columns-with-image-section .column-with-text.grid__item {
-    width: 50%;
-    max-width: 50%;
-  }
-  
-  .two-columns-with-image-section .two-columns-wrapper.grid {
-    gap: 0;
-    width: 100%;
-    display: flex;
-  }
-    .two-columns-wrapper .image img {
-      width: 100%;
-      height: auto;
-  }
-    .two-columns-with-image-section .column-with-text {
-      position: relative;
-  }
-  .column-content {
-      position: absolute;
-      top: 0;  
-      left: 0;
-      right: 0;
-      bottom: 0; 
-  }
-  .two-columns-with-image-section .column-content {
-      padding: 20px;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      flex-direction: column;
-  }
-  .two-columns-with-image-section .column-content h2 {
-      margin: 0px;
-  }
-  
-  /* -------------------- testimonial section ------------------- */
-  .testimonial-section span.percentage {
-    color: #535353;
-    font-family: Montserrat;
-    font-size: 70px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    color: var(--HEADING, #353535);
+    font-size: 18px;
     font-weight: 400;
-    vertical-align: middle;
-  }
+    font-family: "Montserrat";
+}
+
+
+/*-------------------------- media query -------------------------------*/
+@media only screen and (min-width: 1400px) {
+    .testimonial-slider .slick-next {
+        right: -100px;
+    }
+
+    .testimonial-slider .slick-prev {
+        left: -100px;
+    }
+
+    .two-columns-with-image-section .column-content {
+        padding: 40px;
+        max-width: 50rem;
+    }
+}
+
+
+@media only screen and (min-width: 990px) {
+    .footer-block.grid__item.brand-information {
+        width: calc(28% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
+        max-width: calc(28% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
+    }
+
+    .footer-block.grid__item.footer__image {
+        width: calc(20% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
+        max-width: calc(20% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
+    }
+
+    .step-form-section {
+        margin-top: 100px;
+    }
+
+    .be-you-everyday .page-width {
+        max-width: 110rem;
+    }
+
+    .custom-section__image {
+        width: auto;
+        max-width: max-content;
+    }
+
+    .testimonial-slider .testimonial-images.grid__item {
+        width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
+    }
+
+    .testimonial-slider .testimonial-text.grid__item {
+        width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2);
+        padding: 0 50px;
+    }
+
+    .be-you-everyday .grid__item.custom-section__image {
+        width: calc(30% - var(--grid-desktop-horizontal-spacing) / 2);
+        max-width: calc(30% - var(--grid-desktop-horizontal-spacing) / 2);
+    }
+
+    .be-you-everyday .grid__item.custom-section__content {
+        width: calc(70% - var(--grid-desktop-horizontal-spacing) / 2);
+        max-width: calc(70% - var(--grid-desktop-horizontal-spacing) / 2);
+    }
+
+    .Essentials ul.custom-tabs {
+        padding-bottom: 80px;
+        gap: 6rem;
+    }
+}
+
+@media only screen and (max-width: 989px) {
+    .two-columns-with-image-section .column-with-text.grid__item {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .footer .footer-block__details-content .list-menu__item--link {
+        font-size: 16px;
+    }
+
+    .multibox-section .background-none .multicolumn-card__image-wrapper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .newsletter .newsletter-form {
+        max-width: 49rem;
+    }
+  .facets-vertical .facets-wrapper {
+    padding-right: 5rem;
+    border-right: 1px solid #ddd;
+    margin-right: 30px;
+}
+}
+
+@media only screen and (max-width: 749px) {
+    .slideshow__slide .discount-code {
+        margin-bottom: 0;
+    }
+
+    .slideshow__text-wrapper .banner__heading,
+    .logo-list-section h2.title.inline-richtext.h1 {
+        font-size: 32px;
+        text-transform: capitalize;
+    }
+
+    .slider-buttons {
+        bottom: 0rem;
+    }
+
+    .discount-code span.bold-text {
+        font-size: 24px;
+    }
+
+    .collection__title .image-icon svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .line {
+        min-width: 50px;
+    }
+
+    .background-none .multicolumn-card__image-wrapper+.multicolumn-card__info {
+        padding: 1.5rem;
+    }
+
+    .title-with-line {
+        text-align: center;
+    }
+
+    .Essentials .custom-tabs .icon_tabs .icon-image {
+        height: 80px;
+        width: 80px;
+    }
+
+    .collection__title {
+        text-align: left;
+    }
+
+    .logo-list-section .logo-item img {
+        width: 80px;
+        height: auto;
+        max-width: 80px;
+    }
+
+    .footer .footer-block__details-content .list-menu__item--link {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .footer__copyright.caption {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .testimonial-block .grid {
+        flex-direction: column;
+    }
+
+    .testimonial-section span.percentage {
+        font-size: 40px;
+    }
+
+    .testimonial-section .slick-dots li button:before {
+        font-size: 30px;
+    }
+
+    .card__information .card__heading {
+        font-size: 16px;
+    }
+
+    .wishlist .swym-add-to-wishlist-view-product:after {
+        padding: 5px;
+    }  
+
+    .testimonial-block .customer-review {
+        position: relative;
+        padding: 20px;
+    }
+    .testimonial-block .customer-review:before {  
+        left: 0;
+        right: auto;
+    }
+  .faq-section .faq_heading h2 {   
+    font-size: 30px;   
+}
+
+
+}
   
-  .testimonial-section .sub-heading h3 {
-    margin: 0;
-    padding-bottom: 3rem;
-  }
-  
-  .testimonial-section .page-width,
-  .logo-list-section .page-width {
-    max-width: 130rem;
-  }
-  .testimonial-block .image-wrapper img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .custom-tabs .icon-image img {
-    width: 100%;
-    height: auto;
-  }
-  .be-you-everyday .custom-section__content p {
-      font-family: "Playfair Display";
-      font-size: 32px;
-      font-weight: 400;
-      line-height: 45px;
-      letter-spacing: 0.32px;
-      margin: 0;
-  }
-  
-  .header__icons svg.icon.icon-cart-empty, .header__icons svg.icon.icon-cart {
-      height: 2.2rem;
-      width: 2.2rem;
-  }
-  
-  
-  /*-------------------------- media query -------------------------------*/
-  @media only screen and (min-width: 1400px) {
-      .testimonial-slider .slick-next {
-          right: -100px;
-      }
-  
-      .testimonial-slider .slick-prev {
-          left: -100px;
-      }
-  
-      .two-columns-with-image-section .column-content {
-          padding: 40px;
-          max-width: 50rem;
-      }
-  }
-  
-  
-  @media only screen and (min-width: 990px) {
-      .footer-block.grid__item.brand-information {
-          width: calc(28% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
-          max-width: calc(28% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
-      }
-  
-      .footer-block.grid__item.footer__image {
-          width: calc(20% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
-          max-width: calc(20% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
-      }
-  
-      .step-form-section {
-          margin-top: 100px;
-      }
-  
-      .be-you-everyday .page-width {
-          max-width: 98rem;
-      }
-  
-      .custom-section__image {
-          width: auto;
-          max-width: max-content;
-      }
-  
-      .testimonial-slider .testimonial-images.grid__item {
-          width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
-      }
-  
-      .testimonial-slider .testimonial-text.grid__item {
-          width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2);
-          padding: 0 50px;
-      }
-  
-      .be-you-everyday .grid__item.custom-section__image {
-          width: calc(30% - var(--grid-desktop-horizontal-spacing) / 2);
-          max-width: calc(30% - var(--grid-desktop-horizontal-spacing) / 2);
-      }
-  
-      .be-you-everyday .grid__item.custom-section__content {
-          width: calc(70% - var(--grid-desktop-horizontal-spacing) / 2);
-          max-width: calc(70% - var(--grid-desktop-horizontal-spacing) / 2);
-      }
-  
-      .Essentials ul.custom-tabs {
-          padding-bottom: 80px;
-          gap: 6rem;
-      }
-  }
-  
-  @media only screen and (max-width: 989px) {
-      .two-columns-with-image-section .column-with-text.grid__item {
-          width: 100%;
-          max-width: 100%;
-      }
-  }
-  
-  @media only screen and (min-width: 750px) {
-      .footer .footer-block__details-content .list-menu__item--link {
-          font-size: 16px;
-      }
-  
-      .multibox-section .background-none .multicolumn-card__image-wrapper {
-          margin-left: 0;
-          margin-right: 0;
-      }
-  
-      .newsletter .newsletter-form {
-          max-width: 49rem;
-      }
-  }
-  
-  @media only screen and (max-width: 749px) {
-      .slideshow__slide .discount-code {
-          margin-bottom: 0;
-      }
-  
-      .slideshow__text-wrapper .banner__heading,
-      .logo-list-section h2.title.inline-richtext.h1 {
-          font-size: 32px;
-          text-transform: capitalize;
-      }
-  
-      .slider-buttons {
-          bottom: 0rem;
-      }
-  
-      .discount-code span.bold-text {
-          font-size: 24px;
-      }
-  
-      .collection__title .image-icon svg {
-          width: 80px;
-          height: 80px;
-      }
-  
-      .line {
-          min-width: 50px;
-      }
-  
-      .background-none .multicolumn-card__image-wrapper+.multicolumn-card__info {
-          padding: 1.5rem;
-      }
-  
-      .title-with-line {
-          text-align: center;
-      }
-  
-      .Essentials .custom-tabs .icon_tabs .icon-image {
-          height: 80px;
-          width: 80px;
-      }
-  
-      .collection__title {
-          text-align: left;
-      }
-  
-      .logo-list-section .logo-item img {
-          width: 80px;
-          height: auto;
-          max-width: 80px;
-      }
-  
-      .footer .footer-block__details-content .list-menu__item--link {
-          padding-top: 0;
-          padding-bottom: 0;
-      }
-  
-      .footer__copyright.caption {
-          flex-direction: column;
-          row-gap: 1rem;
-      }
-  
-      .testimonial-block .grid {
-          flex-direction: column;
-      }
-  
-      .testimonial-section span.percentage {
-          font-size: 40px;
-      }
-  
-      .testimonial-section .slick-dots li button:before {
-          font-size: 30px;
-      }
-  
-      .card__information .card__heading {
-          font-size: 16px;
-      }
-  
-      .wishlist .swym-add-to-wishlist-view-product:after {
-          padding: 5px;
-      }  
-  
-  
-  }
-    
-  
-  
-  
-  
-  
-  
+
+
+
+
+
