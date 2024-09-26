@@ -214,7 +214,7 @@ h2.banner__heading p {
   padding-bottom: 1rem;
 }
 
-.contact-details {
+.footer-block__image-wrapper .contact-details {
   margin-top: 2rem;
 }
 
@@ -352,8 +352,9 @@ h2.banner__heading p {
 }
 
 .newsletter-form__field-wrapper .field__input {
-  border-radius: 4px;
-  border: 1px solid #abb0b2;
+    /* border-radius: 4px; */
+    /* border: 1px solid #abb0b2; */
+    background: transparent;
 }
 
 .newsletter-form__field-wrapper .newsletter-form__button {
@@ -516,6 +517,13 @@ ul.custom-tabs {
     line-height: 24px;
     text-transform: uppercase;
 }
+.multibox-section .multicolumn-card .multicolumn-card__info h3 {
+    color: var(--primary);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
 /*----------------------------------- collection page SH ------------------------------- */
 .facet-filters__field .select {
     border-radius: 8px;
@@ -578,6 +586,84 @@ ul.custom-tabs {
     font-family: "Montserrat";
 }
 
+.facets-vertical-form .facet-filters {  
+    align-items: center;
+    gap: 20px;
+}
+
+/*------------------- contact page ------------------ */
+.contact-form-details {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    border-bottom: 1px solid #D3D3D3;
+    padding-bottom: 20px;
+}
+
+.contact-form-content {
+    max-width: 45rem;
+}
+
+.page-contact .faq-section {
+    background: #EEF5F8;
+}
+.contact-form-content h2 {
+    color: var(--primary);
+    font-family: "Playfair Display";
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+.contact-details h4, .working_hours h4, .address h4 {
+    color: var(--primary);
+    font-family: Playfair Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: .5px;
+    margin: 0;
+}
+.contact-form-content .address {
+    padding-top: 20px;
+}
+.address p, .contact-details p, .working_hours p {
+    color: var(--SUB-HEADING, #535353);
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 0;
+}
+.contact-form-details a {
+    color: #535353;
+    text-decoration: none;
+}
+.contact__button .button {
+    color: #FFF;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+.contact-form .contact-details {
+    margin-bottom: 30px;
+}
+.field__input, .customer .field input {   
+    border-bottom: 1px solid #353535 !Important;
+}
+.field:after, .select:after, .customer .field:after, .customer select:after, .localization-form__select:after, .field__input:focus-visible, .select__select:focus-visible, .customer .field input:focus-visible, .customer select:focus-visible, .localization-form__select:focus-visible.localization-form__select:after {
+    box-shadow: none !important;
+}
+.field__input, .customer .field input {  
+    padding-left: 0px !important;
+}
 
 /*-------------------------- media query -------------------------------*/
 @media only screen and (min-width: 1400px) {
@@ -661,15 +747,14 @@ ul.custom-tabs {
         margin-left: 0;
         margin-right: 0;
     }
-
     .newsletter .newsletter-form {
         max-width: 49rem;
     }
   .facets-vertical .facets-wrapper {
-    padding-right: 5rem;
-    border-right: 1px solid #ddd;
-    margin-right: 30px;
-}
+      padding-right: 5rem;
+      border-right: 1px solid #ddd;
+      margin-right: 30px;
+   }
 }
 
 @media only screen and (max-width: 749px) {
@@ -761,9 +846,9 @@ ul.custom-tabs {
         left: 0;
         right: auto;
     }
-  .faq-section .faq_heading h2 {   
-    font-size: 30px;   
-}
+   .faq-section .faq_heading h2 {   
+        font-size: 30px;   
+  }
 
 
 }
