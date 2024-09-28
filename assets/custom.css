@@ -773,16 +773,40 @@ ul.custom-tabs {
   row-gap: 24px;
 }
 
-.page-about-us .Pure-radiance {
-  background: #D0EDED;
-}
-
 .scrolling-text ul li {
   color: #D0EDED;
   font-family: 'Outfit';
   font-size: 90px;
   font-weight: 400;
   letter-spacing: 1.8px;
+}
+
+.about-multicolumn .title-wrapper-with-link {
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.about-multicolumn .media.media--transparent.media--circle {
+  padding-bottom: 0;
+  padding-top: 20px;
+}
+
+.about-multicolumn .multicolumn-card__image-wrapper--third-width {
+  width: 60%;
+}
+
+.about-multicolumn .media.media--transparent.media--circle img {
+  position: relative;
+  max-width: 100%;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  margin: auto;
+}
+
+.Pure-radiance .global-media-settings,
+.sustainable-future .global-media-settings {
+  border: none;
 }
 
 .about-multicolumn .multicolumn-list .multicolumn-list__item:nth-child(1) .multicolumn-card {
@@ -799,6 +823,8 @@ ul.custom-tabs {
   border-radius: 6px;
   background: rgba(250, 187, 5, 0.05);
 }
+
+/*------------------ faq page ------------------- */
 
 /* ---------------------- btn hover effect------------------- */
 .banner__buttons a.button.button--primary {
