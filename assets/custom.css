@@ -825,6 +825,17 @@ ul.custom-tabs {
 }
 
 /*------------------ faq page ------------------- */
+.faq-page-wrapper {
+  display: flex;
+}
+
+.faq-page-wrapper .faq-sidebar {
+  width: 25%;
+}
+
+.faq-page-wrapper .faq-container {
+  width: 75%;
+}
 
 /* ---------------------- btn hover effect------------------- */
 .banner__buttons a.button.button--primary {
@@ -845,7 +856,7 @@ ul.custom-tabs {
   animation: anime 5s linear infinite;
 }
 
-.btn-shadow {
+.slideshow__text-wrapper .btn-shadow {
   position: absolute;
   margin-top: 70px;
   z-index: -1;
@@ -853,7 +864,7 @@ ul.custom-tabs {
   opacity: 0.8;
 }
 
-div:empty {
+.slideshow__text-wrapper div:empty {
   display: block !Important;
 }
 
