@@ -1,0 +1,387 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="{{ section.settings.custom__class }}section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+    <h1 class="title inline-richtext center">{{ section.settings.page_heading }}</h1>
+    <!-- Sidebar -->
+    <div class="faq-page-wrapper">
+      <div class="faq-sidebar">
+        <ul class="list-unstyled faq-tabs">
+          {% for block in section.blocks %}
+            <li>
+              <a href="#{{ block.id }}">{{ block.settings.heading }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="faq-container">
+        {% for block in section.blocks %}
+          <div id="{{ block.id }}" class="faq-block">
+            <h2 class="faq-block-title">{{ block.settings.heading }}</h2>
+
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+              <div class="faq-question" data-target="#faq-body1-{{ block.id }}">
+                <h3 class="faq-title">{{ block.settings.faq_title1 }}</h3>
+                <span class="faq-icon">
+                  <!-- Plus SVG Icon -->
+                  <svg
+                    class="icon-plus"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <!-- Minus SVG Icon (hidden initially) -->
+                  <svg
+                    class="icon-minus"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="display: none;"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </span>
+              </div>
+              <div id="faq-body1-{{ block.id }}" class="faq-answer">
+                <p>{{ block.settings.faq_content1 }}</p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+              <div class="faq-question" data-target="#faq-body2-{{ block.id }}">
+                <h3 class="faq-title">{{ block.settings.faq_title2 }}</h3>
+                <span class="faq-icon">
+                  <!-- Plus SVG Icon -->
+                  <svg
+                    class="icon-plus"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <!-- Minus SVG Icon (hidden initially) -->
+                  <svg
+                    class="icon-minus"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="display: none;"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </span>
+              </div>
+              <div id="faq-body2-{{ block.id }}" class="faq-answer">
+                <p>{{ block.settings.faq_content2 }}</p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+              <div class="faq-question" data-target="#faq-body3-{{ block.id }}">
+                <h3 class="faq-title">{{ block.settings.faq_title3 }}</h3>
+                <span class="faq-icon">
+                  <!-- Plus SVG Icon -->
+                  <svg
+                    class="icon-plus"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <!-- Minus SVG Icon (hidden initially) -->
+                  <svg
+                    class="icon-minus"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="display: none;"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </span>
+              </div>
+              <div id="faq-body3-{{ block.id }}" class="faq-answer">
+                <p>{{ block.settings.faq_content3 }}</p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+              <div class="faq-question" data-target="#faq-body4-{{ block.id }}">
+                <h3 class="faq-title">{{ block.settings.faq_title4 }}</h3>
+                <span class="faq-icon">
+                  <!-- Plus SVG Icon -->
+                  <svg
+                    class="icon-plus"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <!-- Minus SVG Icon (hidden initially) -->
+                  <svg
+                    class="icon-minus"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="display: none;"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </span>
+              </div>
+              <div id="faq-body4-{{ block.id }}" class="faq-answer">
+                <p>{{ block.settings.faq_content4 }}</p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+              <div class="faq-question" data-target="#faq-body5-{{ block.id }}">
+                <h3 class="faq-title">{{ block.settings.faq_title5 }}</h3>
+                <span class="faq-icon">
+                  <!-- Plus SVG Icon -->
+                  <svg
+                    class="icon-plus"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  <!-- Minus SVG Icon (hidden initially) -->
+                  <svg
+                    class="icon-minus"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="display: none;"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </span>
+              </div>
+              <div id="faq-body5-{{ block.id }}" class="faq-answer">
+                <p>{{ block.settings.faq_content5 }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Schema Settings for FAQ Section -->
+{% schema %}
+{
+  "name": "FAQ Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom class"
+    },
+    {
+      "type": "text",
+      "id": "page_heading",
+      "label": "Page Heading"
+    },
+    {
+      "type": "color_scheme",
+      "id": "section_color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "FAQ Title"
+        },
+        {
+          "type": "text",
+          "id": "faq_title1",
+          "label": "FAQ Title",
+          "default": "What is your return policy?"
+        },
+        {
+          "type": "textarea",
+          "id": "faq_content1",
+          "label": "FAQ Content",
+          "default": "You can return any item within 30 days of purchase."
+        },
+        {
+          "type": "text",
+          "id": "faq_title2",
+          "label": "FAQ Title",
+          "default": "What is your return policy?"
+        },
+        {
+          "type": "textarea",
+          "id": "faq_content2",
+          "label": "FAQ Content",
+          "default": "You can return any item within 30 days of purchase."
+        },
+        {
+          "type": "text",
+          "id": "faq_title3",
+          "label": "FAQ Title",
+          "default": "What is your return policy?"
+        },
+        {
+          "type": "textarea",
+          "id": "faq_content3",
+          "label": "FAQ Content",
+          "default": "You can return any item within 30 days of purchase."
+        },
+        {
+          "type": "text",
+          "id": "faq_title4",
+          "label": "FAQ Title",
+          "default": "What is your return policy?"
+        },
+        {
+          "type": "textarea",
+          "id": "faq_content4",
+          "label": "FAQ Content",
+          "default": "You can return any item within 30 days of purchase."
+        },
+        {
+          "type": "text",
+          "id": "faq_title5",
+          "label": "FAQ Title",
+          "default": "What is your return policy?"
+        },
+        {
+          "type": "textarea",
+          "id": "faq_content5",
+          "label": "FAQ Content",
+          "default": "You can return any item within 30 days of purchase."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Section",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
